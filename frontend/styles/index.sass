@@ -3,16 +3,753 @@
 @import '_variables.sass';
 
 body
-  font: 100% $font-stack
-  color: $primary-color
+	margin: 0
+	font: 100% $font-stack
+	color: $primary-color
+	font-weight: $main-fw
+	font-size: 16px
+	line-height: 24px
 
-main
-  width: 100%
-  height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
+.container
+	max-width: 1050px
+	margin: 0 auto
+
+header
+	max-height: 90px
+	border-bottom: 1px solid #ececec
+
+.menu
+	display: flex
+	justify-content: space-between
+
+.menu a
+	display: flex
+	align-items: center
+	height: 90px
+	text-decoration: none
+	color: $primary-color
+
+.menu a:hover
+	color: #8d8d8d
+
+.menu a:active
+	color: #cacaca
+
+.menu__logo
+	margin-right: 50px
+	width: 170px
+	background-image: url("../img/menu__logo.png")
+	background-repeat: no-repeat
+	background-position: center
+
+.menu__logo:hover
+	background-image: url("../img/logoh.png")
+
+.menu__logo:active
+	background-image: url("../img/logoa.png")
+
+.tablet-menu
+	display: none
+
+.mobile-menu
+	height: 80px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	display: none
+
+.mobile-menu__btn
+	display: flex
+	justify-content: right
+	margin-top: 30px
+	width: 23px
+	height: 21px
+	position: relative
+	cursor: pointer
+
+.mobile-menu__btn span 
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $primary-color
+	opacity: 1
+	left: 0
+	transform: rotate(0deg)
+	transition: .25s ease-in-out
+	top: 0
+
+.mobile-menu__btn span:nth-child(2)
+	top: 8px
+
+.mobile-menu__btn span:nth-child(3)
+	bottom: 1px
+	top: initial
+
+.mobile-menu__btn.active span:nth-child(2)
+	left: -100%
+	opacity: 0
+
+.mobile-menu__btn.active span:nth-child(1) 
+	transform: rotate(45deg)
+	top: 9px
+
+.mobile-menu__btn.active span:nth-child(3)
+	transform: rotate(-45deg)
+	bottom: 8px
+
+.mobile-menu__dropdown
+	position: absolute
+	width: 100%
+	top: 70px
+	left: 0
+	top: 80px
+	z-index: 5
+	overflow: hidden
+	background-color: #fff
+	display: none
+
+.mobile-menu__dropdown.show
+	display: flex
+	flex-direction: column
+
+.mobile-menu__link
+	text-decoration: none
+	color: $primary-color
+	text-align: center
+	line-height: 80px
+	height: 80px
+	border-top: 1px solid #ececec
+	border-bottom: 1px solid #ececec
+	vertical-align: middle
+
+.mobile-menu
+	position: relative
+
+.mobile-menu__close
+	position: absolute
+	top: 23px
+	right: -6px
+	width: 40px
+	height: 32px
+	font-size: 0
+	background-color: transparent
+	border: 0
+	cursor: pointer
+	outline: none
+	display: none
+
+.mobile-menu__close:before, .mobile-menu__close:after
+	content: ''
+	position: absolute
+	width: 30px
+	height: 2px
+
+	background-color: #000
+	border-radius: 1px
+	right: 2px
+
+.mobile-menu__close:before 
+	transform: rotate(45deg)
+
+.mobile-menu__close:after 
+	transform: rotate(-45deg)
+
+.mobile-menu__close.showclose
+	display: block
+
+.mobile-search
+	position: relative
+
+.mobile-search:before
+	content: ""
+	position: absolute
+	top: 30px
+	left: 42px
+	width: 26px
+	height: 26px
+	background-image: url("../img/search.png")
+	background-repeat: no-repeat
+
+.mobile-basket
+	position: relative
+
+.mobile-basket:before
+	content: ""
+	position: absolute
+	top: 29px
+	left: 44px
+	width: 26px
+	height: 26px
+	background-image: url("../img/basket.png")
+	background-repeat: no-repeat
+
+.catalog-link
+	width: 189px
+	border-right: 1px solid #ececec
+
+.search-link
+	width: 84px
+	border-right: 1px solid #ececec
+	border-left: 1px solid #ececec
+	background-image: url("../img/search.png")
+	background-repeat: no-repeat
+	background-position: center
+
+.search-link:hover
+	background-image: url("../img/shover.png")
+	background-repeat: no-repeat
+	background-position: center
+
+.search-link:active
+	background-image: url("../img/sactive.png")
+	background-repeat: no-repeat
+	background-position: center
+
+.basket-link
+	position: relative
+
+.basket-link:before
+	content: ""
+	position: absolute
+	top: 36px
+	left: -36px
+	width: 26px
+	height: 26px
+	background-image: url("../img/basket.png")
+	background-repeat: no-repeat
+
+.basket-link:hover:before
+	content: ""
+	position: absolute
+	top: 36px
+	left: -36px
+	width: 26px
+	height: 26px
+	background-image: url("../img/bhover.png")
+	background-repeat: no-repeat
+
+.basket-link:active:before
+	content: ""
+	position: absolute
+	top: 36px
+	left: -36px
+	width: 26px
+	height: 26px
+	background-image: url("../img/bactive.png")
+	background-repeat: no-repeat
+
+.headline--logo
+	background-image: url("../img/mainbackground.png")
+	background-repeat: no-repeat
+	background-position: center
+	height: 746px
+
+.headlone--catalog
+	height: 233px
+
+.headlone--catalog .headline--tittle
+	margin-top: 0
+	margin-bottom: 8%
+
+.headline
+	background-color: #f9f9f9
+	padding-top: 20px
+	width: 100%
+	position: relative
+
+.headline:after
+	content: ""
+	position: absolute
+	bottom: -5px
+	width: 100%
+	height: 20px
+	background: url("../img/zigzag.png")
+
+.headline .container
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.headline__menu
+	display: flex
+	justify-content: space-between
+
+.headline__menu a
+	text-decoration: none
+	color: $primary-color
+	font-size: 14px
+
+.headline__menu a:hover
+	color: #8d8d8d
+
+.headline__menu a:active
+	color: #cacaca
+
+.headline__menu-up
+	display: flex
+	justify-content: space-between
+	width: 425px
+
+.main-tittle
+	font-size: 50px
+	line-height: 57px
+	position: relative
+	z-index: 1
+
+.headline--tittle
+	display: block
+	text-align: center
+	margin-top: -240px
+
+.headline__menu-down
+	display: flex
+	flex-direction: row
+
+.headline__menu-subject, .headline__menu-toys
+	width: 50%
+	height: 119px
+
+.headline__menu-subject
+	background-color: #63d1bb
+
+.headline__menu-subject a, .headline__menu-toys a
+	text-decoration: none
+	color: #fff
+	font-size: 20px
+	line-height: 30px
+
+.headline__menu-toys
+	background-color: #56c3b2
+
+.headline__menu--container
+	display: flex
+	justify-content: space-between
+	margin: 34px 36px 0
+
+.headline__menu-subject:hover .headline__menu--container,
+.headline__menu-toys:hover .headline__menu--container
+	margin-top: 29px
+
+.headline__menu-subject:active .headline__menu--container a,
+.headline__menu-toys:active .headline__menu--container a
+	color: #97e2d2
+
+.headline__menu-subject:active img,
+.headline__menu-toys:active img
+	opacity: 0.5
+
+.mainproduct .container
+	display: flex
+	flex-direction: row
+	justify-content: left
+
+.mainproduct
+	position: relative
+
+.mainproduct:after
+	content: ""
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 23px
+	background: url("../img/zigzaggray.png")
+
+.section-tittle
+	width: 175px
+	line-height: 30px
+	color: #63d1bb
+	text-align: center
+
+.section-tittle p
+	margin: 0
+
+.basis-tittle
+	font-weight: 400
+	font-size: 15px
+	line-height: 20px
+
+.mainproduct .container
+	display: flex
+	flex-direction: column
+	position: relative
+
+.mainproduct__img
+    position: absolute
+    top: 100px
+    right: 0
+
+.mainproduct__about
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+
+.mainproduct__about_text
+	width: 350px
+	margin-left: 175px
+
+.mainproduct__mobileimg
+	display: none
+
+.mainproduct__mobileimg img
+	display: flex
+	width: 100%
+
+.text-discription
+	margin: 80px 0
+
+.pricetable
+	border-collapse: collapse
+
+.pricetable tr
+	height: 40px
+	border-bottom: 1px solid #ececec
+
+.pricetable td:first-child
+	width: 97px
+
+.mainproduct__about-price
+	margin-top: 100px
+	text-align: center
+	margin-bottom: 70px
+	margin-left: 175px
+	width: 260px
+
+.mainproduct__tittle
+	display: flex
+	justify-content: flex-start
+	margin-top: 130px
+
+.mainproduct__tittle .main-tittle
+	margin-top: 0
+
+.mainproduct__about_wrap
+	display: flex
+	flex-direction: row
+
+.btn
+	display: block
+	box-sizing: border-box
+	padding: 11px 15px
+	max-width: 290px
+	text-decoration: none
+	color: $primary-color
+	border: 2px solid black
+
+.btn:hover
+	background-color: #444444
+	border: 2px solid transparent
+	color: #fff
+
+.btn:active
+	color: #757575
+
+.page__wrapper
+	width: 700px
+	margin: 0 auto
+
+.about-us__items
+	display: flex
+	flex-wrap: wrap
+
+.about-us__item
+	width: 50%
+	margin-top: 70px
+	position: relative
+
+.about-us__item:before
+	content: ""
+	position: absolute
+	top: -40px
+	left: -10px
+	width: 60px
+	height: 44px
+	background-image: url("../img/sprite.png")
+
+.flower:before
+	background-position: -1px -6px
+
+.yarn:before
+	background-position: -51px -6px
+
+.price:before
+	background-position: -114px -6px
+
+.rocket:before
+	background-position: -183px -6px
+
+.heart:before
+	background-position: -253px -6px
+
+.present:before
+	background-position: -303px -6px
+
+.about-us__item p
+	display: block
+	width: 260px
+
+.review
+	padding: 100px 0 150px
+	background-image: url("../img/review.png")
+	background-repeat: no-repeat
+	background-position: 113px 73px
+	position: relative
+
+.review:after
+	content: ""
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 23px
+	background: url("../img/zigzaggray.png")
+
+.review__wrap
+	margin-left: 175px
+	display: flex
+	justify-content: flex-end
+	flex-direction: column
+
+.review__tittle
+	display: flex
+	justify-content: space-between
+
+.review-discription
+	margin-top: 58px
+	width: 700px
+
+.review__slide
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+
+.review__tittle .btn
+	width: 175px
+	height: 50px
+	text-align: center
+	margin-top: 40px
+
+.review__nav-arrow
+	display: flex
+	justify-content: space-between
+	width: 175px
+	height: 30px
+
+.left:hover, .right:hover
+	opacity: 0.7
+
+.left:active, .right:active
+	opacity: 0.4
+
+.mobile-btn
+	width: 230px
+	text-align: center
+	margin: 0 auto
+	display: none
+
+.contacts .container
+	display: flex
+	justify-content: space-between
+	flex-direction: column
+	margin-bottom: 100px
+
+.flag-tittle
+	width: 175px
+	text-align: center
+
+.contacts__text
+	display: flex
+	justify-content: space-between
+
+.contacts__table
+	margin-left: 175px
+
+.contacts__table
+	margin-top: 50px
+	width: 265px
+	cursor: pointer
+
+.contacts__table td:first-child
+	// width: 746px
+	height: 60px
+
+.contacts__table td
+	vertical-align: top
+
+.contacts__mail
+	text-decoration: underline
+	text-decoration-color: #46c1ae
+
+.contacts__mail:hover
+	color: #46c1ae
+
+.contacts__mail:active
+	opacity: 0.5
+
+.contacts__btn
+	margin-left: 175px
+	width: 230px
+	text-align: center
+
+.map
+	width: 535px
+
+.map iframe
+	width: 100%
+	height: 430px
+	border: 0
+
+footer
+	background-color: #f1f1f1
+	height: 142px
+
+footer .container
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 100%
+
+.footer-logo
+	width: 116px
+	height: 40px
+	background-image: url("../img/footerlogo.png")
+	background-repeat: no-repeat
+	background-position: center
+
+.footer-logo:hover
+	background-image: url("../img/logogr.png")
+	background-position: center
+	background-repeat: no-repeat
+
+.footer-logo:active
+	opacity: 0.5
+
+.footer-social
+	width: 160px
+	display: flex
+	justify-content: space-between
+
+.social-item
+	position: relative
+	font-size: 0
+
+.social-item:before
+	content: ""
+	position: absolute
+	top: 0
+	width: 30px
+	height: 30px
+	background-image: url("../img/footersprite.png")
+	background-repeat: no-repeat
+
+.social-item:hover:before
+	background-image: url("../img/fspritegr.png")
+
+.social-item:active:before
+	opacity: 0.3
+
+.inst:before
+	background-position: -27px -1px
+
+.fb:before
+	background-position: 1px -4px
+
+.tw:before
+	background-position: -59px -1px
+
+.developing a
+	text-decoration: none
+	color: $primary-color
+
+.catalog
+	margin: 125px 0 57px
+
+.catalog .container
+	display: flex
+	justify-content: space-between
+
+.catalog__item
+	width: calc(33.333% - 50px)
+	border: 1px solid #ececec
+
+.catalig-img
+	width: 100%
+	height: auto
+	display: flex
+
+.imgmobile
+	display: none
+
+.catalog__item-wrap
+	margin: 25px
+
+.catalog__item-discription
+	height: 120px
+
+.small-tittle
+	font-size: 15px
+	line-height: 30px
+	font-weight: 400
+
+.catalog__item-price
+	height: 75px
+	display: flex
+	align-items: center
+	border-top: 1px solid #ececec
+	position: relative
+
+.catalog__item-price:after
+	content: ""
+	position: absolute
+	top: 27px
+	right: 0
+	width: 26px
+	height: 26px
+	background-image: url("../img/basket.png")
+	background-repeat: no-repeat
+
+.video
+	margin-bottom: 100px
+
+.video-wrap
+	display: flex
+	justify-content: space-between
+	height: 454px
+	border: 1px solid #ececec
+
+.mobile-tittle
+	margin-left: 70px
+	display: none
+
+.videoblock
+	width: 70%
+
+.videoblock iframe
+	width: 100%
+	height: 100%
+	border: 0
+
+.video__discription
+	width: 30%
+	margin-top: 100px
+	margin-left: 80px
+
+.video--tittle
+	position: relative
+
+.video--tittle:before
+	content: ""
+	position: absolute
+	bottom: 87px
+	width: 35px
+	height: 25px
+	background-image: url("../img/video.png")
+	background-repeat: no-repeat
+
+.video__discription .btn
+	margin-top: 60px
+	width: 80%
+	text-align: center
 
 
 // !!! media.sass should be the last
