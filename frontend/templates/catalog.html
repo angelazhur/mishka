@@ -7,127 +7,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
-    <title>catalog</title>
+    <title>Catalog</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="desktop-menu menu">
-                <a href="" class="catalog-link">Каталог товаров</a>
-                <a href="" class="knitting">Вязание на заказ</a>
-                <a href="" class="menu__logo"></a>
-                <a href="" class="search-link"></a>
-                <a href="" class="basket-link" >Корзина: пока пуста</a>
-            </div>
-            <div class="tablet-menu">
-                <div class="menu">
-                    <a href="" class="menu__logo"></a>
-                    <a href="" class="search-link"></a>
-                    <a href="" class="basket-link" >Корзина: пока пуста</a>
-                </div>
-            </div>
-            <nav class="mobile-menu">
-                <a href="" class="menu__logo"></a>
-                <div class="mobile-menu__btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-        <div class="mobile-menu__dropdown">
-            <a class="mobile-menu__link" href="#">Каталог товаров</a>
-            <a class="mobile-menu__link"  href="#">Вязание на заказ</a>
-            <a class="mobile-menu__link mobile-search" href="#">Поиск по сайту</a>
-            <a class="mobile-menu__link mobile-basket" href="#">Корзина: пока пуста</a>
-        </div>
-    </header>
+<!--=include parts/sections/header.html -->
     <main>
-        <section class="headline headlone--catalog">
-            <div class="container">
-                <div class="headline__menu">
-                    <div class="headline__menu-up">
-                        <a href="">Новые поступления</a>
-                        <a href="">Распродажа</a>
-                    </div>
-                    <a href="">Бесплатная доставка по России</a>
-                </div>
-                <h2 class="main-tittle headline--tittle">Каталог товаров</h2>
-            </div>
-        </section>
-        <section class="catalog">
-            <div class="container">
-                <div class="catalog__item">
-                    <img class="catalig-img imgdesktop" src="img/rabbit.png" alt="">
-                    <img class="catalig-img imgmobile" src="img/rabbitm.png" alt="">
-                    <div class="catalog__item-wrap">
-                        <div class="catalog__item-discription">
-                            <h4>Зайчик-попрыгайчик</h4>
-                            <p class="small-tittle">Рост 30 см, вес 200 г</p>
-                        </div>
-                        <div class="catalog__item-price">
-                            <p>1 200 руб</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog__item">
-                    <img class="catalig-img imgdesktop" src="img/basketl.png" alt="">
-                    <img class="catalig-img imgmobile" src="img/basketlm.png" alt="">
-                    <div class="catalog__item-wrap">
-                        <div class="catalog__item-discription">
-                            <h4>Корзинка для белья</h4>
-                            <p class="small-tittle">Диаметр 15 см, высота 10 см</p>
-                        </div>
-                        <div class="catalog__item-price">
-                            <p>690 руб</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog__item">
-                    <img class="catalig-img imgdesktop" src="img/basketb.png" alt="">
-                    <img class="catalig-img imgmobile" src="img/basketbm.png" alt="">
-                    <div class="catalog__item-wrap">
-                        <div class="catalog__item-discription">
-                            <h4>Большая корзинка для игрушек</h4>
-                            <p class="small-tittle">Диаметр 30 см, высота 30 см</p>
-                        </div>
-                        <div class="catalog__item-price">
-                            <p>1 500 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="video">
-            <div class="container">
-                <div class="video-wrap">
-                    <p class="video--tittle mobile-tittle">Процесс производства</p>
-                    <div class="videoblock">
-                        <iframe src="https://www.youtube.com/embed/DrKClMvitbU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video__discription">
-                        <h4 class="video--tittle">Процесс <br>производства</h4>
-                        <p class="small-tittle">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-                        <a class="btn" href="">Сделать заказ</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--=include parts/sections/catalog-headline.html -->
+<!--=include parts/sections/catalog.html -->
+<!--=include parts/sections/video.html -->
     </main>
-    <footer>
-        <div class="container">
-            <div class="footer-logo">
-            </div>
-            <div class="footer-social">
-                <a class="social-item inst" href="">инст</a>
-                <a class="social-item fb" href="">фб</a>
-                <a class="social-item tw" href="">твит</a>
-            </div>
-            <div class="developing">
-                <a href="">Разработано</a>
-            </div>
-        </div>
-    </footer>
+<!--=include parts/sections/footer.html -->
+
 
 
 

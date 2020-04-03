@@ -107,6 +107,15 @@
 		width: 100%
 		margin: 0 auto
 
+	.order-item
+		width: 100%
+
+	.order__btn .order-tittle
+		display: none
+
+	.order .small-tittle
+		margin-left: 0
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -254,6 +263,46 @@
 
 	.videoblock
 		height: 200px
+
+	.order-wrap
+		flex-direction: column
+
+	.order-tittle
+		width: 100%
+		text-align: left
+		margin-bottom: 20px
+		position: relative
+
+	.order-tittle:after
+		content: ""
+		position: absolute
+		display: block
+		top: 12px
+		right: 0
+		width: 80%
+		height: 2px
+		background-color: #63d1bb
+
+	.phone-tittle:after
+		top: 28px
+
+	.order__additionally .order-tittle:after
+		width: 46%
+
+	.email-tittle
+		display: none
+
+	.email-hidden
+		display: block
+
+	.email-input:after
+		top: 36px
+
+	.order__btn input
+		margin: 0 auto
+
+	.order__btn .small-tittle
+		display: none
 
 	footer .container
 		flex-direction: column
