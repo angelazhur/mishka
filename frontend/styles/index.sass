@@ -301,7 +301,7 @@ header
 .headline--tittle
 	display: block
 	text-align: center
-	margin-top: -240px
+	margin-top: 80px
 
 .headline__menu-down
 	display: flex
@@ -327,6 +327,7 @@ header
 	display: flex
 	justify-content: space-between
 	margin: 34px 36px 0
+	transition: all 1s ease
 
 .headline__menu-subject:hover .headline__menu--container,
 .headline__menu-toys:hover .headline__menu--container
@@ -376,9 +377,16 @@ header
 	position: relative
 
 .mainproduct__img
-    position: absolute
-    top: 100px
-    right: 0
+	position: absolute
+	top: 100px
+	right: 0
+	width: 520px
+	height: 630px
+
+.mainproduct__img img
+	width: 100%
+	height: 100%
+	object-fit: cover
 
 .mainproduct__about
 	display: flex
@@ -491,9 +499,6 @@ header
 
 .review
 	padding: 100px 0 150px
-	background-image: url("../img/review.png")
-	background-repeat: no-repeat
-	background-position: 113px 73px
 	position: relative
 
 .review:after
@@ -504,6 +509,22 @@ header
 	height: 23px
 	background: url("../img/zigzaggray.png")
 
+.review__tittle
+	position: relative
+
+.review__img
+	position: absolute
+	top: 100px
+	left: 120px
+	width: 350px
+	height: 457px
+	z-index: 1
+
+.review__img img
+	width: 100%
+	height: 100%
+	object-fit: cover
+
 .review__wrap
 	margin-left: 175px
 	display: flex
@@ -513,15 +534,18 @@ header
 .review__tittle
 	display: flex
 	justify-content: space-between
+	z-index: 2
 
 .review-discription
 	margin-top: 58px
 	width: 700px
+	z-index: 2
 
 .review__slide
 	display: flex
 	justify-content: space-between
 	align-items: flex-end
+	z-index: 2
 
 .review__tittle .btn
 	width: 175px
@@ -548,21 +572,32 @@ header
 	display: none
 
 .contacts .container
+	margin-bottom: 100px
+	display: flex
+	justify-content: flex-end
+
+.contacts__wrap
 	display: flex
 	justify-content: space-between
 	flex-direction: column
-	margin-bottom: 100px
+	width: calc(100% - 175px)
 
-.flag-tittle
-	width: 175px
-	text-align: center
+.catalog__tittle
+	position: relative
+
+.catalog__tittle:before
+	content: ''
+	position: absolute
+	left: -100px
+	top: 36px
+	width: 70px
+	height: 100px
+	background-image: url("../img/flag.png")
+	background-repeat: no-repeat
 
 .contacts__text
 	display: flex
 	justify-content: space-between
-
-.contacts__table
-	margin-left: 175px
 
 .contacts__table
 	margin-top: 50px
@@ -570,7 +605,6 @@ header
 	cursor: pointer
 
 .contacts__table td:first-child
-	// width: 746px
 	height: 60px
 
 .contacts__table td
@@ -587,7 +621,6 @@ header
 	opacity: 0.5
 
 .contacts__btn
-	margin-left: 175px
 	width: 230px
 	text-align: center
 
@@ -632,6 +665,9 @@ footer .container
 .social-item
 	position: relative
 	font-size: 0
+	display: block
+	width: 30px
+	height: 30px
 
 .social-item:before
 	content: ""
